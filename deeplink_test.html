@@ -20,25 +20,33 @@ only screen and (min-device-pixel-ratio : 2) {
 }
 	</style>
 	
-	<script>
-		
-		function checkAppInstalledOrNot() {
-			  var app = {
-				 launchApp: function() {
-				 	alert("launchin the app");
-      				 window.open("kariyerisara://selvie");
-      				 this.timer = setTimeout(this.openWebApp, 1000);
-    			},
+	<script type="text/javascript">
 
-    			openWebApp: function() {
-    				alert("launching the itunes page");
-      				window.location.replace("http://itunes.apple.com/tr/app/kariyer.net-is-ara/id574794931?mt=8");
-    			}
-  			};
+    // detect if safari mobile
+    function isMobileSafari() {
+        return navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)
+    }
+    //Launch the element in your app if it's already installed on the phone
+    function LaunchApp(){
+      window.open("kariyerisara://selvie","_self");
+    };
 
-  			app.launchApp();
-		}
-	</script>
+    if (isMobileSafari()){
+        // To avoid the "protocol not supported" alert, fail must open itunes store to dl the app, add a link to your app on the store
+        var appstorefail = "https://itunes.apple.com/tr/app/kariyer.net-is-ara/id574794931?mt=8";
+        var loadedAt = +new Date;
+        setTimeout(
+          function(){
+            if (+new Date - loadedAt < 2000){
+              window.location = appstorefail;
+            }
+          }
+        ,100);
+        LaunchApp()
+
+    }
+
+</script>
 </head>
 
 <body>
@@ -46,6 +54,6 @@ only screen and (min-device-pixel-ratio : 2) {
 <a href="serhatsezer://deeptest/product/ip-123">visit iphone page</a><br />
 <a href="serhatsezer://deeptest/product/sm-341">visit samsung page</a><br />
 <a href="serhatsezer://deeptest/product/ht-31ec">visit htc page</a><br />
-<a href="javascript:void(0)" onclick="checkAppInstalledOrNot();">Visit Kariyer.net</a>
+<a href="javascript:void(0)" onclick="LaunchApp();">Visit Kariyer.net</a>
 </body>
 </html>
