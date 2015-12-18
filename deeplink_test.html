@@ -25,12 +25,12 @@ only screen and (min-device-pixel-ratio : 2) {
 		function checkAppInstalledOrNot() {
 			  var app = {
 				 launchApp: function() {
-      				 window.location.replace("kariyerisara://selvie");
+      				 window.open("kariyerisara://selvie");
       				 this.timer = setTimeout(this.openWebApp, 1000);
     			},
 
     			openWebApp: function() {
-      				window.location.replace("https://itunes.apple.com/tr/app/kariyer.net-is-ara/id574794931?mt=8");
+      				window.open("https://itunes.apple.com/tr/app/kariyer.net-is-ara/id574794931?mt=8");
     			}
   			};
 
