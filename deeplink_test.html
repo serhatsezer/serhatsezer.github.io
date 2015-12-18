@@ -21,32 +21,17 @@ only screen and (min-device-pixel-ratio : 2) {
 	</style>
 	
 	<script type="text/javascript">
+		function checkAppInstalled() {
+			setTimeout(function() {
+			  window.location = "https://itunes.apple.com/tr/app/kariyer.net-is-ara/id574794931?mt=8";
+			}, 25);
 
-    // detect if safari mobile
-    function isMobileSafari() {
-        return navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)
-    }
-    //Launch the element in your app if it's already installed on the phone
-    function LaunchApp(){
-      window.open("kariyerisara://selvie","_self");
-    };
-
-    if (isMobileSafari()){
-        // To avoid the "protocol not supported" alert, fail must open itunes store to dl the app, add a link to your app on the store
-        var appstorefail = "http://itunes.apple.com/tr/app/kariyer.net-is-ara/id574794931?mt=8";
-        var loadedAt = +new Date;
-        setTimeout(
-          function(){
-            if (+new Date - loadedAt < 2000){
-              window.location = appstorefail;
-            }
-          }
-        ,100);
-        LaunchApp()
-
-    }
-
-</script>
+// If "custom-uri://" is registered the app will launch immediately and your
+// timer won't fire. If it's not set, you'll get an ugly "Cannot Open Page"
+// dialogue prior to the App Store application launching
+			window.location = "kariyerisara://selvie";
+		}
+	</script>
 </head>
 
 <body>
