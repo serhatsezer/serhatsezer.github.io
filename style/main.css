@@ -1,0 +1,91 @@
+body {
+	font-family: "Montserrat";
+}
+
+.info {
+	line-height: 1.8em;
+}
+
+.info a {
+	color: #ccc;
+	text-decoration: none;
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 95%, #444444 95%)
+}
+
+.info a:hover {
+	color: #333;
+}
+
+.slogan h1 {
+	font-size: 50px;
+	padding: 0px;
+	margin:0px;
+}
+
+.slogan p {
+	padding: 0px;
+	margin: 0px;
+	color: #ccc;
+	font-size: 24px;
+}
+
+.emphasize {
+	font-size: 20px;
+	padding-right: 20px;
+	color: #333;
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 95%, #444444 95%)
+}
+
+.container {
+	width: 960px;
+	min-height: 700px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+}
+
+.header {
+	width: 100%;
+	min-height: 120px;
+}
+
+.menu {
+	width: 50%;
+	float: right;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ccc;
+}
+
+.menu li {
+    float: right;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #111;
+}
+.slogan {
+	float: left;
+	width: 50%;
+}
+
+
+.info {
+	width: 100%;
+	float: left;
+
+}
