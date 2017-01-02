@@ -2,7 +2,12 @@
 <head>
 	
 	<script type="text/javascript">
-		var app = new Object();
+		
+		var app = {
+			getId: function(intf) {
+			
+			}
+		}
 
 		function getText() {
 			app.getId(100);
@@ -10,10 +15,11 @@
 			return 100;
 		}
 		
+		window.onload = getText();
 
 	</script>
 </head>
-<body onload="getText();">
+<body>
 	
 </body>
 </html>
