@@ -8,8 +8,11 @@
 			}
 		}*/
 		function getText() {
-			
-			window.app.getId("100");
+			try {
+							window.app.getId("100");
+
+			} catch {
+			}
 			return 100;
 		}
 		
