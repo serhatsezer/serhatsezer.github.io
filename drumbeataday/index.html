@@ -3,6 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Drum beat a day</title>
+    <script type="text/javascript">
+          function onLoad() {
+              var location = window.location.href;
+              var code = location.split("?");
+              console.log(code);
+          }
+          window.onload = onLoad;
+    </script>
   </head>
   <body>
 <a href="https://api.instagram.com/oauth/authorize/?client_id=f4aacd588ecd447d96bdde0100cdf715&redirect_uri=http://serhatsezer.github.io/drumbeataday/index.html&response_type=code">Login with Instagram</a>
