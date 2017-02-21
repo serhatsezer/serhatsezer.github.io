@@ -13,7 +13,7 @@
               console.log("code " + code);
 
               if (code) {
-                var feed = new Instafeed({ get: 'tagged', tagName: 'BeatADay', userId: '241543756', accessToken: "241543756.ba4c844.404fda4b78c24c139aee4188193c676b", sortBy: 'most-liked', limit: '1000' }); feed.run();
+                var feed = new Instafeed({ get: 'tagged', tagName: 'BeatADay', userId: '241543756', accessToken: "241543756.ba4c844.404fda4b78c24c139aee4188193c676b", sortBy: 'most-liked', limit: '1000',template: '<a href="{{link}}"><img src="{{video}}" /></a>' }); feed.run();
               }
           }
           window.onload = onLoad;
