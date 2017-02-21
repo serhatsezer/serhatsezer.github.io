@@ -13,13 +13,7 @@
               console.log("code " + code);
 
               if (code) {
-                var feed = new Instafeed({
-                   get: 'tagged',
-                   tagName: 'awesome',
-                   clientId: 'f4aacd588ecd447d96bdde0100cdf715',
-                   accessToken: code
-               });
-               feed.run();
+                var feed = new Instafeed({ get: 'tagged', tagName: 'drumming', userId: 'serhatsezerr', accessToken: code, sortBy: 'most-recent', limit: '100' }); feed.run();
               }
           }
           window.onload = onLoad;
