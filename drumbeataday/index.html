@@ -6,25 +6,27 @@
     <script type="text/javascript" src="instafeed.min.js"></script>
 
     <script type="text/javascript">
-    var feed = new Instafeed({
-       get: 'tagged',
-       tagName: 'awesome',
-       clientId: 'f4aacd588ecd447d96bdde0100cdf715'
-   });
-   feed.run();
-          /*function onLoad() {
+
+          function onLoad() {
               var location = window.location.href;
               var code = location.split("?code=")[1];
               console.log("code " + code);
 
               if (code) {
-
+                var feed = new Instafeed({
+                   get: 'tagged',
+                   tagName: 'awesome',
+                   clientId: 'f4aacd588ecd447d96bdde0100cdf715',
+                   accessToken: code
+               });
+               feed.run();
               }
           }
-          window.onload = onLoad;*/
+          window.onload = onLoad;
     </script>
   </head>
   <body>
 <div id="instafeed"></div>
+<a href="https://api.instagram.com/oauth/authorize/?client_id=f4aacd588ecd447d96bdde0100cdf715&redirect_uri=http://serhatsezer.github.io/drumbeataday/index.html&response_type=code">Login with Instagram</a>
   </body>
 </html>
