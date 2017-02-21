@@ -6,8 +6,8 @@
     <script type="text/javascript">
           function onLoad() {
               var location = window.location.href;
-              var code = location.split("?");
-              console.log(code);
+              var code = location.split("?code=");
+              console.log("code " + code);
           }
           window.onload = onLoad;
     </script>
