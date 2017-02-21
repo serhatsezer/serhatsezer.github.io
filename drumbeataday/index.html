@@ -7,11 +7,13 @@
 
     <script type="text/javascript">
     var feed = new Instafeed({
-        get: 'tagged',
-        tagName: 'awesome',
-        clientId: 'f4aacd588ecd447d96bdde0100cdf715'
-    });
-    feed.run();
+       get: 'user',
+       userId: 'tristankelley',
+       filter: function(image) {
+           return image.tags.indexOf('TAG_NAME') >= 0;
+       }
+   });
+   feed.run();
           /*function onLoad() {
               var location = window.location.href;
               var code = location.split("?code=")[1];
