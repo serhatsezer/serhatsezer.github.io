@@ -7,11 +7,11 @@
 </head>
 <script type="text/javascript">
   (function() {
-    alert("device 5 : " + generateURL());
+    alert("device 6 : " + generateURL());
     window.location.href = generateURL();
 
     function generateURL() {
-      var url = "https://dj94g.app.goo.gl/vQaV?"+getBundleIDOfDevice()+"&"+getMinVersionOfDevice()+"&"+getLinkOfDevice()+""
+      var url = "https://dj94g.app.goo.gl/?link=http://fanfan.chat&st=serhat"+getBundleIDOfDevice()+"&"+getMinVersionOfDevice()+"&"+getLinkOfDevice()+""
       return encodeURI(url)
     }
 
@@ -28,9 +28,9 @@
     function getMinVersionOfDevice() {
       var version = ""
       if (getMobileOperatingSystem() == "Android") {
-        version = "?amv=12.0"
+        version = "&amv=12.0"
       } else {
-        version = "?imv=10.0"
+        version = "&imv=10.0"
       }
       return encodeURI(version)
     }
