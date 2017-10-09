@@ -6,7 +6,7 @@
   (function() {
 
 //alert("link " +generateURL())
-window.location.href = generateURL();
+window.location = generateURL();
 
 
     function generateURL() {
