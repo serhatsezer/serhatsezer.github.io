@@ -10,7 +10,7 @@
 
     function generateURL() {
       var url = "https://dj94g.app.goo.gl/?link=http://fanfan.chat"+getBundleIDOfDevice()+"["+getMinVersionOfDevice()+"]["+getLinkOfDevice()+"]"
-      return encodeURIComponent(url)
+      return url
     }
 
     function getLinkOfDevice() {
@@ -20,7 +20,7 @@
       } else {
         link = "&ifl=https://itunes.apple.com/tr/app/fanfan/id1195650132"
       }
-      return link
+      return encodeURI(link)
     }
 
     function getMinVersionOfDevice() {
@@ -30,7 +30,7 @@
       } else {
         version = "&imv=10.0"
       }
-      return version
+      return encodeURI(version)
     }
 
     function getBundleIDOfDevice() {
@@ -40,7 +40,7 @@
       } else {
         bundleID = "&ibi=com.stoneship.fanfan"
       }
-      return bundleID
+      return encodeURI(bundleID)
     }
 
     function getMobileOperatingSystem() {
