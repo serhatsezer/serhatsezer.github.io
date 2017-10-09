@@ -1,0 +1,69 @@
+<html>
+<head>
+  <title>FanFan link test</title>
+</head>
+<script type="text/javascript">
+  (function() {
+
+alert("link " +generateURL())
+
+
+    function generateURL() {
+      var url = "https://dj94g.app.goo.gl/?link=http://fanfan.chat"+getBundleIDOfDevice()+"["+getMinVersionOfDevice()+"]["+getLinkOfDevice()+"]"
+      return url
+    }
+
+    function getLinkOfDevice() {
+      var link = ""
+      if (getMobileOperatingSystem() == "Android") {
+        link = "&al=https://play.google.com/store/apps/details?id=com.stoneship.fanfan"
+      } else {
+        link = "&ifl=https://itunes.apple.com/tr/app/fanfan/id1195650132"
+      }
+      return link
+    }
+
+    function getMinVersionOfDevice() {
+      var version = ""
+      if (getMobileOperatingSystem() == "Android") {
+        version = "&amv=12.0"
+      } else {
+        version = "&imv=10.0"
+      }
+      return version
+    }
+
+    function getBundleIDOfDevice() {
+      var bundleID = ""
+      if (getMobileOperatingSystem() == "Android") {
+        bundleID = "&apn=com.stoneship.fanfan"
+      } else {
+        bundleID = "&ibi=com.stoneship.fanfan"
+      }
+      return bundleID
+    }
+
+    function getMobileOperatingSystem() {
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        if (/windows phone/i.test(userAgent)) {
+            return "Windows Phone";
+        }
+
+        if (/android/i.test(userAgent)) {
+            return "Android";
+        }
+
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            return "iOS";
+        }
+
+        return "unknown";
+    }
+
+  })();
+</script>
+<body>
+
+</body>
+</html>
