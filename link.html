@@ -4,12 +4,12 @@
 </head>
 <script type="text/javascript">
   (function() {
-    alert("device : " + getMobileOperatingSystem());
+    alert("device 2 : " + getMobileOperatingSystem());
     window.location.href = generateURL();
 
     function generateURL() {
       var url = "https://dj94g.app.goo.gl/?link=http://fanfan.chat"+getBundleIDOfDevice()+"["+getMinVersionOfDevice()+"]["+getLinkOfDevice()+"]"
-      return encodeURIComponent(url)
+      return encodeURI(url)
     }
 
     function getLinkOfDevice() {
