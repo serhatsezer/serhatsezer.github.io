@@ -5,7 +5,7 @@
 <script type="text/javascript">
   (function() {
 
-//alert("link " +generateURL())
+alert("link " +generateURL())
 //window.location.href = generateURL();
 
 
