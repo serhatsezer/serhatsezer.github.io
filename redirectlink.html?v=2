@@ -6,7 +6,7 @@
   (function() {
 
 //alert("link " +generateURL())
-window.location = "https://google.com.tr";
+window.location.href = generateURL();
 
 
     function generateURL() {
