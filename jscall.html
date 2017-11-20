@@ -2,15 +2,17 @@
 <head>
 	
 	<script type="text/javascript">
-		function deneme() {
+		function deneme(param) {
+			document.getElementById("sample").innerHTML = param
 			alert("çalıştı");
 		}
 		
-		window.onload = deneme();
+		//window.onload = deneme();
 
 	</script>
 </head>
 <body>
 ödeme sayfası
+	<p id="sample"></p>
 </body>
 </html>
